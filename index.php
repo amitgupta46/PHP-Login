@@ -13,57 +13,130 @@
   <body>
     <div class="container">
       <div class="form-signin">
-        <div class="alert alert-success">You have been <strong>successfully logged in</strong>.</div>
-          <div class="form-group row">
-              <!-- <label for="example-text-input" class="col-xs-2 col-form-label">Text</label>
-              <div class="col-xs-10">
-              <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
-              </div> -->
-              <!-- <div>
-                <label for="example-text-input" class="col-xs-2 col-form-label">Doctor: </label>
-                <select class="form-control form-control-lg">
-                <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-              <div>
-                <label for="example-text-input" class="col-xs-2 col-form-label">Health Club: </label>
-                <select class="form-control form-control-lg">
-                <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-              <div>
-                <label for="example-text-input" class="col-xs-2 col-form-label">Insurance Company: </label>
-                <select class="form-control form-control-lg">
-                <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div>
-              <div>
-                <label for="example-text-input" class="col-xs-2 col-form-label">Employer: </label>
-                <select class="form-control form-control-lg">
-                <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-              </div> -->
-
-
-
-
-
-            </div>
-          </div>  
+        <div class="alert alert-success" id="success-alert">You have been <strong>successfully logged in</strong>.</div>
         <a href="login/logout.php" class="btn btn-default btn-lg btn-block">Logout</a>
       </div>
+
+      <!-- form elements-->
+      <form>
+      <h2>Upload your health record</h2></br>
+        
+        <div class="form-group">
+          <label for="exampleInputFile">File input</label>
+          <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+          <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+        </div>
+
+        <div class="form-group">
+        <table><tr><td width="90%">
+          <label for="exampleSelect1">My Doctor: </label>
+          <select class="form-control" id="exampleSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          </td><td> 
+            <label class="custom-control custom-radio">
+            <input id="radio1" name="radio" type="radio" class="custom-control-input" checked>
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Yes</span>
+            </label>
+            <label class="custom-control custom-radio">
+            <input id="radio2" name="radio" type="radio" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">No</span>
+            </label>
+          </td>
+        </tr></table>
+        </div>
+        
+        <div class="form-group">
+        <table><tr><td width="90%">
+          <label for="exampleSelect1">Health Club: </label>
+          <select class="form-control" id="exampleSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          </td><td> 
+                    <label class="custom-control custom-radio">
+                    <input id="radio1" name="radio" type="radio" class="custom-control-input" checked>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Yes</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                    <input id="radio2" name="radio" type="radio" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">No</span>
+                    </label>
+          </td>
+        </tr></table>
+        </div>
+        <div class="form-group">
+        <table><tr><td width="90%">
+          <label for="exampleSelect1">Employer: </label>
+          <select class="form-control" id="exampleSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          </td><td> 
+                    <label class="custom-control custom-radio">
+                    <input id="radio1" name="radio" type="radio" class="custom-control-input" checked>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Yes</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                    <input id="radio2" name="radio" type="radio" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">No</span>
+                    </label>
+          </td>
+        </tr></table>
+        </div>
+
+        <div class="form-group">
+        <table><tr><td width="90%">
+          <label for="exampleSelect1">Insurance Company: </label>
+          <select class="form-control" id="exampleSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+          </td><td> 
+                    <label class="custom-control custom-radio">
+                    <input id="radio1" name="radio" type="radio" class="custom-control-input" checked>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Yes</span>
+                    </label>
+                    <label class="custom-control custom-radio">
+                    <input id="radio2" name="radio" type="radio" class="custom-control-input">
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">No</span>
+                    </label>
+          </td>
+        </tr></table>
+        </div>
+        <div class="form-group">
+          <label for="exampleTextarea">Notes and Comments</label>
+          <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your PHR notes with anyone else.</small>
+        </div>
+        
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+
+
     </div> <!-- /container -->
   </body>
 </html>
