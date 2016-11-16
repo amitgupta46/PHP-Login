@@ -18,12 +18,12 @@
       </div>
 
       <!-- form elements-->
-      <form>
+      <form action="login/scripts/upload.php" method="post" enctype="multipart/form-data">
       <h2>Upload your health record</h2></br>
         
         <div class="form-group">
           <label for="exampleInputFile">File input</label>
-          <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+          <input type="file" class="form-control-file" name= "fileToUpload" id="fileToUpload" aria-describedby="fileHelp">
           <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
         </div>
 
@@ -38,13 +38,13 @@
             <option>5</option>
           </select>
           </td><td> 
-            <label class="custom-control custom-radio">
-            <input id="radio1" name="radio" type="radio" class="custom-control-input" checked>
+            <label class="custom-control custom-radio-doctor">
+            <input id="radio1" name="radio" type="radio" class="custom-control-input-doctor" checked>
             <span class="custom-control-indicator"></span>
             <span class="custom-control-description">Yes</span>
             </label>
-            <label class="custom-control custom-radio">
-            <input id="radio2" name="radio" type="radio" class="custom-control-input">
+            <label class="custom-control custom-radio-doctor">
+            <input id="radio2" name="radio" type="radio" class="custom-control-input-doctor">
             <span class="custom-control-indicator"></span>
             <span class="custom-control-description">No</span>
             </label>
@@ -63,13 +63,13 @@
             <option>5</option>
           </select>
           </td><td> 
-                    <label class="custom-control custom-radio">
-                    <input id="radio1" name="radio" type="radio" class="custom-control-input" checked>
+                    <label class="custom-control custom-radio-healthclub">
+                    <input id="radio1" name="radio" type="radio" class="custom-control-input-healthclub" checked>
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Yes</span>
                     </label>
-                    <label class="custom-control custom-radio">
-                    <input id="radio2" name="radio" type="radio" class="custom-control-input">
+                    <label class="custom-control custom-radio-healthclub">
+                    <input id="radio2" name="radio" type="radio" class="custom-control-input-healthclub">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">No</span>
                     </label>
@@ -87,13 +87,13 @@
             <option>5</option>
           </select>
           </td><td> 
-                    <label class="custom-control custom-radio">
-                    <input id="radio1" name="radio" type="radio" class="custom-control-input" checked>
+                    <label class="custom-control custom-radio-employer">
+                    <input id="radio1employer" name="radio" type="radio" class="custom-control-input-employer" checked>
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Yes</span>
                     </label>
-                    <label class="custom-control custom-radio">
-                    <input id="radio2" name="radio" type="radio" class="custom-control-input">
+                    <label class="custom-control custom-radio-employer">
+                    <input id="radio2employer" name="radio" type="radio" class="custom-control-input-employer">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">No</span>
                     </label>
@@ -113,12 +113,12 @@
           </select>
           </td><td> 
                     <label class="custom-control custom-radio">
-                    <input id="radio1" name="radio" type="radio" class="custom-control-input" checked>
+                    <input id="radio1insurance" name="radio" type="radio" class="custom-control-input-insurance" checked>
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">Yes</span>
                     </label>
                     <label class="custom-control custom-radio">
-                    <input id="radio2" name="radio" type="radio" class="custom-control-input">
+                    <input id="radio2insurance" name="radio" type="radio" class="custom-control-input-insurance">
                     <span class="custom-control-indicator"></span>
                     <span class="custom-control-description">No</span>
                     </label>
@@ -132,7 +132,7 @@
         </div>
         
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <input type="submit" name=submit" class="btn btn-primary">
       </form>
 
 
