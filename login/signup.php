@@ -1,12 +1,9 @@
 <?php
   session_start();
-
   if (isset($_SESSION['username'])) {
       session_start();
       session_destroy();
   }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,11 +21,27 @@
 
       <form class="form-signup" id="usersignup" name="usersignup" method="post" action="createuser.php">
         <h2 class="form-signup-heading">Register</h2>
-        <input name="newuser" id="newuser" type="text" class="form-control" placeholder="Username" autofocus>
-        <input name="email" id="email" type="text" class="form-control" placeholder="Email">
+        <input name="newname" id="newname" type="text" class="form-control" placeholder="FirstName LastName" autofocus>
+<br>
+        <input name="newuser" id="newuser" type="text" class="form-control" placeholder="Username"> <input name="email" id="email" type="text" class="form-control" placeholder="Email">
 <br>
         <input name="password1" id="password1" type="password" class="form-control" placeholder="Password">
         <input name="password2" id="password2" type="password" class="form-control" placeholder="Repeat Password">
+
+        <!-- <div class="form-control btn-group" name="" id="" role="group" aria-label="Entity">
+          <button type="button" class="btn btn-default" name="entity" value="patient">Patient</button>
+          <button type="button" class="btn btn-default" name="entity" value="doctor">Doctor</button>
+          <button type="button" class="btn btn-default" name="entity" value="employer">Employer</button>
+          <button type="button" class="btn btn-default" name="entity" value="hospital">Hospital</button>
+          <button type="button" class="btn btn-default" name="entity" value="insurance">Insurance</button>
+          <button type="button" class="btn btn-default" name="entity" value="club">Club</button>
+        </div> -->
+          <input type="radio" name='entity' id="entity" value="Patient">Patient
+          <input type="radio" name='entity' id ="entity" value="Doctor">Doctor
+          <input type="radio" name='entity' id ="entity" value="Employer">Employer
+          <input type="radio" name='entity' id ="entity" value="Hospital">Hospital
+          <input type="radio" name='entity' id ="entity" value="Insurance">Insurance
+          <input type="radio" name='entity' id ="entity" value="Healthclub">Healthclub
 
         <button name="Submit" id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
 

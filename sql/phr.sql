@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 16, 2016 at 06:07 PM
--- Server version: 10.1.9-MariaDB
--- PHP Version: 5.5.30
+-- Generation Time: Nov 17, 2016 at 07:31 
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 5.5.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -39,7 +39,8 @@ CREATE TABLE `loginAttempts` (
 --
 
 INSERT INTO `loginAttempts` (`IP`, `Attempts`, `LastLogin`, `Username`, `ID`) VALUES
-('::1', 2, '2016-11-16 17:16:18', 'amitgupta', 1);
+('::1', 2, '2016-11-16 17:16:18', 'amitgupta', 1),
+('127.0.0.1', 1, '2016-11-17 12:59:39', 'amitgupta', 2);
 
 -- --------------------------------------------------------
 
@@ -49,19 +50,46 @@ INSERT INTO `loginAttempts` (`IP`, `Attempts`, `LastLogin`, `Username`, `ID`) VA
 
 CREATE TABLE `members` (
   `id` char(23) NOT NULL,
+  `name` varchar(64) NOT NULL,
   `username` varchar(65) NOT NULL DEFAULT '',
   `password` varchar(65) NOT NULL DEFAULT '',
   `email` varchar(65) NOT NULL,
+  `entity` varchar(64) NOT NULL,
   `verified` tinyint(1) NOT NULL DEFAULT '0',
   `mod_timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `members`
+-- Table structure for table `patientmap`
 --
 
-INSERT INTO `members` (`id`, `username`, `password`, `email`, `verified`, `mod_timestamp`) VALUES
-('1847663066582c861c3fa18', 'amitgupta', '$2y$10$jJ.GJUck6QLr1G2WL0fvTOl/8dQGirgFEwGTGAoQlRjPihZB3N/XO', 'amitgupta.nitb@gmail.com', 1, '2016-11-16 16:16:28');
+CREATE TABLE `patientmap` (
+  `patientid` char(23) CHARACTER SET utf8 NOT NULL,
+  `entityid` char(23) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `records`
+--
+
+CREATE TABLE `records` (
+  `phrid` int(64) NOT NULL,
+  `authorid` int(64) NOT NULL,
+  `patientid` int(64) NOT NULL,
+  `filepath` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `records`
+--
+
+INSERT INTO `records` (`phrid`, `authorid`, `patientid`, `filepath`) VALUES
+(0, 0, 0, '/tmp/'),
+(0, 0, 0, '/tmp/');
 
 --
 -- Indexes for dumped tables
@@ -90,7 +118,7 @@ ALTER TABLE `members`
 -- AUTO_INCREMENT for table `loginAttempts`
 --
 ALTER TABLE `loginAttempts`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

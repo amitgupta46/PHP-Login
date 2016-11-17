@@ -2,12 +2,23 @@
 require 'includes/functions.php';
 include_once 'config.php';
 
+function console_log( $data ){
+  echo '<script>';
+  echo 'console.log('. json_encode( $data ) .')';
+  echo '</script>';
+}
+
 //Pull username, generate new ID and hash password
 $newid = uniqid(rand(), false);
 $newuser = $_POST['newuser'];
 $newpw = password_hash($_POST['password1'], PASSWORD_DEFAULT);
 $pw1 = $_POST['password1'];
 $pw2 = $_POST['password2'];
+
+$newname = $_POST['newname'];
+$entity = $_POST['entity'];
+console_log($newname);
+console_log($entity);
 
     //Enables moderator verification (overrides user self-verification emails)
 if (isset($admin_email)) {
@@ -40,7 +51,7 @@ if ($pw1 != $pw2) {
 
         $a = new NewUserForm;
 
-        $response = $a->createUser($newuser, $newid, $newemail, $newpw);
+        $response = $a->createUser($newname, $newuser, $newid, $newemail, $newpw, $entity);
 
         //Success
         if ($response == 'true') {
