@@ -18,9 +18,9 @@
 
   <body>
     <div class="container">
-
+    <center><h2><img width="70px" src="../images/logo.png">Patient Health Record Management System</h2></center>
       <form class="form-signup" id="usersignup" name="usersignup" method="post" action="createuser.php">
-        <h2 class="form-signup-heading">Register</h2>
+        <center><h3 class="form-signup-heading">Register</h3></center>
         <input name="newname" id="newname" type="text" class="form-control" placeholder="FirstName LastName" autofocus>
 <br>
         <input name="newuser" id="newuser" type="text" class="form-control" placeholder="Username"> <input name="email" id="email" type="text" class="form-control" placeholder="Email">
@@ -36,13 +36,15 @@
           <button type="button" class="btn btn-default" name="entity" value="insurance">Insurance</button>
           <button type="button" class="btn btn-default" name="entity" value="club">Club</button>
         </div> -->
+        <div>
           <input type="radio" name='entity' id="entity" value="Patient">Patient
           <input type="radio" name='entity' id ="entity" value="Doctor">Doctor
           <input type="radio" name='entity' id ="entity" value="Employer">Employer
           <input type="radio" name='entity' id ="entity" value="Hospital">Hospital
           <input type="radio" name='entity' id ="entity" value="Insurance">Insurance
           <input type="radio" name='entity' id ="entity" value="Healthclub">Healthclub
-
+        </div>
+        <br>
         <button name="Submit" id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
 
         <div id="message"></div>

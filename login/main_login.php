@@ -17,9 +17,10 @@ if (isset($_SESSION['username'])) {
 
   <body>
     <div class="container">
+      <center><h2><img width="70px" src="../images/logo.png">Patient Health Record Management System</h2></center>
 
       <form class="form-signin" name="form1" method="post" action="checklogin.php">
-        <h2 class="form-signin-heading">Please sign in</h2>
+        <h3 class="form-signin-heading">Please sign in</h3>
         <input name="myusername" id="myusername" type="text" class="form-control" placeholder="Username" autofocus>
         <input name="mypassword" id="mypassword" type="password" class="form-control" placeholder="Password">
         <!-- The checkbox remember me is not implemented yet...

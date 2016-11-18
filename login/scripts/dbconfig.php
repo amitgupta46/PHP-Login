@@ -2,8 +2,8 @@
 	$dbhost = "localhost";
 	$dbuser = "root";
 	$dbpass = "";
-	$dbname = "phr";
+	$dbname = "phrdb";
 	mysql_connect($dbhost,$dbuser,$dbpass) or die('cannot connect to the server'); 
-	echo "success connected to db!";
+	//echo "success connected to db!";
 	mysql_select_db($dbname) or die('database selection problem');
 ?>

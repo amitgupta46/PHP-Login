@@ -56,7 +56,7 @@ if ($pw1 != $pw2) {
         //Success
         if ($response == 'true') {
 
-            echo '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'. $signupthanks .'</div><div id="returnVal" style="display:none;">true</div>';
+            echo '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>'. $signupthanks .'<br><a href="/phr/login/main_login.php"><b>SIGN IN</b> HERE!</a></div><div id="returnVal" style="display:none;">true</div>';
 
             //Send verification email
             $m = new MailSender;
